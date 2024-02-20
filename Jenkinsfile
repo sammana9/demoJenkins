@@ -5,7 +5,7 @@ pipeline{
   stage('debug'){
   steps{
   
-  echo "BRANCH_NAME:${env.BRANCH_NAME}"
+  echo "BRANCH_NAME:${BRANCH_NAME}"
   }
   }
   
