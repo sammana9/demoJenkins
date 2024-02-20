@@ -4,7 +4,6 @@ environment {
 
 CREDENTIAL_SERVER = credentials('credential-server')
 }
-
   stages {
   stage('debug'){
   steps{
