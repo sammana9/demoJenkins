@@ -1,10 +1,7 @@
 pipeline{
   agent any
-environment {
 
-CREDENTIAL_SERVER = credentials('credential-server')
-}
-  stages {
+stages {
   stage('debug'){
   steps{
   
@@ -34,8 +31,13 @@ CREDENTIAL_SERVER = credentials('credential-server')
       }
 	  stage('creds'){
 	  steps{
-	   echo "printing credentials ${CREDENTIAL_SERVER}"
-		  sh '${CREDENTIAL_SERVER}'
+	 
+	   withCredentials([usernamePassword(credentialsId:'credential-server',usernameVariable:'USER',passwordVariable:'PWD')]){
+	   
+	   
+	  sh "${USER}"
+	  sh "${PWD}"
+	   }
 	  }
   }
 }
