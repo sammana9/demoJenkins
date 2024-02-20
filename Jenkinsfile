@@ -1,5 +1,9 @@
 pipeline{
   agent any
+environment {
+
+CREDENTIAL_SERVER = credentials('credential-server')
+}
 
   stages {
   stage('debug'){
@@ -29,5 +33,10 @@ pipeline{
           echo 'hello this new test'
         }
       }
+	  stage('creds'){
+	  steps{
+	   echo "printing credentials:${CREDENTIAL_SERVER}"
+	   sh "${CREDENTIAL_SERVER}"
+	  }
   }
 }
