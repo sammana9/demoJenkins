@@ -1,13 +1,11 @@
 pipeline{
   agent any
-  environment {
-  CODE_CHANGES = true
-  }
+
   stages {
     stage('compile') {
 	when {
 	expression {
-	  BRANCH_NAME=='main' && echo "code changes ${CODE_CHANGES}"
+	  BRANCH_NAME=='main'
 	}
 	}
           steps {
