@@ -2,6 +2,13 @@ pipeline{
   agent any
 
   stages {
+  stage('debug'){
+  steps{
+  
+  echo "BRANCH_NAME:${BRANCH_NAME}"
+  }
+  }
+  
     stage('compile') {
 	when {
 	expression {
