@@ -40,3 +40,4 @@ CREDENTIAL_SERVER = credentials('credential-server')
 	  }
   }
 }
+}
