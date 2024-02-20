@@ -35,7 +35,7 @@ CREDENTIAL_SERVER = credentials('credential-server')
       }
 	  stage('creds'){
 	  steps{
-	   echo "printing credentials:${CREDENTIAL_SERVER}"
+	   echo "printing credentials ${CREDENTIAL_SERVER}"
 	   sh "${CREDENTIAL_SERVER}"
 	  }
   }
