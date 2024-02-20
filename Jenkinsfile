@@ -35,7 +35,7 @@ stages {
 	   withCredentials([usernamePassword(credentialsId:'credential-server',usernameVariable:'USER',passwordVariable:'PWD')]){
 	   
 	   
-	  sh '''"${USER}"'''
+	  sh ''' "echo ${USER}"'''
 	  
 	   }
 	  }
