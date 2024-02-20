@@ -1,11 +1,13 @@
-CODE_CHANGES = getGitChanges()
 pipeline{
   agent any
+  environment {
+  CODE_CHANGES = true
+  }
   stages {
     stage('compile') {
 	when {
 	expression {
-	  BRANCH_NAME=='main' && CODE_CHANGES==true
+	  BRANCH_NAME=='main' && echo "code changes ${CODE_CHANGES}"
 	}
 	}
           steps {
