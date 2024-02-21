@@ -69,9 +69,8 @@ CREDENTIAL_SERVER = credentials('credential-server')
   steps{
   
   git branch: 'main',url:'https://github.com/sammana9/demoJenkins.git'
-   echo "commitnumber: ${GIT_COMMIT}"
    script{
-   def gitcommit =GIT_COMMIT
+   def gitcommit =env.GIT_COMMIT
    echo "newcommitnumber: ${gitcommit}"
    }
    
