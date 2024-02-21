@@ -4,6 +4,10 @@ pipeline{
    maven 'Maven'
   
   }
+  parameters {
+  
+  string(name:'FirstName', defaultValue:'SureshAmmana', description:'testing')
+  }
   
 environment {
 
@@ -33,11 +37,11 @@ CREDENTIAL_SERVER = credentials('credential-server')
       stage('test') {
 	  when {
 	  expression {
-	   env.BRANCH_NAME =='dev'
+	   env.BRANCH_NAME =='dev' || env.BRANCH_NAME=='main'
 	  }
 	  }
         steps {
-          echo 'hello this new test'
+          echo "hello this new test ${params.FirstName}"
         }
       }
 	  stage('creds'){
