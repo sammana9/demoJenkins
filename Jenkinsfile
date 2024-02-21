@@ -25,8 +25,9 @@ CREDENTIAL_SERVER = credentials('credential-server')
 	}
 	}
           steps {
+		     mvn package
             echo 'hello this new compile'
-			mvn package
+			
           }
           }
       stage('test') {
