@@ -1,5 +1,10 @@
 pipeline{
   agent any
+  tools{
+   maven: 'Maven'
+  
+  }
+  
 environment {
 
 CREDENTIAL_SERVER = credentials('credential-server')
@@ -21,6 +26,7 @@ CREDENTIAL_SERVER = credentials('credential-server')
 	}
           steps {
             echo 'hello this new compile'
+			mvn package
           }
           }
       stage('test') {
