@@ -25,7 +25,7 @@ CREDENTIAL_SERVER = credentials('credential-server')
 	}
 	}
           steps {
-		     mvn package
+		   sh 'mvn package'
             echo 'hello this new compile'
 			
           }
