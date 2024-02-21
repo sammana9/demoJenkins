@@ -59,7 +59,6 @@ CREDENTIAL_SERVER = credentials('credential-server')
   
    script{
      gv= load 'demo.groovy'
-      gv.hellworld()
 	  
 	  echo " test ${gv}"
    }
