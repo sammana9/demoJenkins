@@ -64,6 +64,16 @@ CREDENTIAL_SERVER = credentials('credential-server')
    }
   }
   }
+  stage('checkout'){
+  
+  steps{
+  
+  git branch: 'main',url:'https://github.com/sammana9/demoJenkins.git'
+   echo "commitnumber: ${COMMIT_ID}"
+  }
+  
+  }
+  
   
 }
 }
