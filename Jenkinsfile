@@ -1,3 +1,5 @@
+
+def gv
 pipeline{
   agent any
   tools{
@@ -50,5 +52,19 @@ CREDENTIAL_SERVER = credentials('credential-server')
 	   sh ''' echo "creds:${CREDENTIAL_SERVER}" '''
 	  }
   }
+  
+  stage('groovy') {
+  
+  steps{
+  
+   script{
+     gv= load 'demo.groovy'
+      gv.hellworld()
+	  
+	  echo " test ${gv}"
+   }
+  }
+  }
+  
 }
 }
