@@ -9,6 +9,7 @@ booleanParam(name:'check',defaultValue:'true',description:'checking the booleanv
 
 stages{
 stage('test') {
+steps{
 
 script {
 
@@ -21,7 +22,7 @@ else
  echo 'value is false'
 }
 
-
+}
 }
 
 }
