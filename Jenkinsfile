@@ -47,7 +47,8 @@ CREDENTIAL_SERVER = credentials('credential-server')
 	  }
 	  }
         steps {
-          echo "hello this new test ${params.FirstName}"
+          echo "hello this new test ${params.FirstName}
+		build(job:'main',propagate:false)
         }
       }
 	  stage('creds'){
