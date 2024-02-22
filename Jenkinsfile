@@ -4,7 +4,7 @@ pipeline{
 agent any
 parameters {
 
-booleanParam(name:'hello',defaultValue:'false',description:'checking the booleanvalue')
+booleanParam(name:'hello',defaultValue:'true',description:'checking the booleanvalue')
 }
 
 stages{
@@ -13,7 +13,7 @@ steps{
 
 script {
 
-if(params.hello)
+if(hello)
 {
 echo 'value is true'
 }
