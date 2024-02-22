@@ -2,13 +2,14 @@
 def gv
 pipeline{
   agent any
+options{
+  buildDiscarder(logRotator(numToKeepStr:'15'))
+ }
   tools{
    maven 'Maven'
   
   }
- options{
-  buildDiscarder(logRotator(numToKeepStr:'15'))
- }
+
   parameters {
   
   string(name:'FirstName', defaultValue:'SureshAmmana', description:'testing')
