@@ -16,6 +16,7 @@ script {
 if(hello)
 {
 echo 'value is true'
+echo "checking ${name}"
 }
 else
 {
