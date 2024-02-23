@@ -1,6 +1,8 @@
+pipeline{
+agent any
+stages{
 stage('userfetch'){
 steps{
-
 wrap([$class:'BuildUser']){
 
  script{
@@ -18,3 +20,6 @@ wrap([$class:'BuildUser']){
 
 }
 }
+}
+}
+
