@@ -22,6 +22,15 @@ CREDENTIAL_SERVER = credentials('credential-server')
 
   stages {
   
+  stage('userfetch'){
+steps{
+
+wrap([$class:'BuildUser']){
+
+echo "username:${BUILD_USER}"
+}
+}
+}
   
   stage('approvalrequest')
   {
@@ -38,7 +47,7 @@ CREDENTIAL_SERVER = credentials('credential-server')
   steps{
   
   echo "BRANCH_NAME:${BRANCH_NAME}"
-  echo "BuildUser:${BUILD_USER}"
+  
   }
   }
   
