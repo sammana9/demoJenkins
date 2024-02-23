@@ -35,6 +35,7 @@ CREDENTIAL_SERVER = credentials('credential-server')
   steps{
   
   echo "BRANCH_NAME:${BRANCH_NAME}"
+  echo "BuildUser:${BUILD_USER}"
   }
   }
   
