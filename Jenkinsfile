@@ -22,15 +22,26 @@ CREDENTIAL_SERVER = credentials('credential-server')
 
   stages {
   
-  stage('userfetch'){
+stage('userfetch'){
 steps{
-
 wrap([$class:'BuildUser']){
 
-echo "username:${BUILD_USER}"
+ script{
+ def usrname="${BUILD_USER}"
+ if(usrname=='admin')
+ {
+ echo 'suresh can only build this'
+ }
+ else{
+ 
+ echo 'no one can build this except suresh'
+ }
+ }
+}
+
 }
 }
-}
+
   
   stage('approvalrequest')
   {
