@@ -26,7 +26,6 @@ CREDENTIAL_SERVER = credentials('credential-server')
   {
   steps{
    input('suresh please approve this build')
-	sh ''' please approve it '''
   }
   }
   stage('debug'){
