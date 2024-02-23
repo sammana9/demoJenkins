@@ -85,7 +85,7 @@ CREDENTIAL_SERVER = credentials('credential-server')
   
   post {
   success{
-  archiveArtifacts '**'
+  archiveArtifacts 'target/**'
   }
   }
   
