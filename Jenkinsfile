@@ -84,6 +84,11 @@ CREDENTIAL_SERVER = credentials('credential-server')
   }
   
   }
+  post {
+  success{
+    archiveArtifacts 'target/*'
+  }
+  }
   
   
 }
