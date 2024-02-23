@@ -38,7 +38,7 @@ steps{
 
 wrap([$class:'BuildUser']){
 
-echo username:"${BUILD_USER}"
+echo "username:${BUILD_USER}"
 }
 }
 }
