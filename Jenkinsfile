@@ -28,7 +28,7 @@ wrap([$class:'BuildUser']){
 
  script{
  def usrname="${BUILD_USER}"
- if(usrname=='admin')
+ if(usrname=='suresh')
  {
  error " build aborted"
  }
